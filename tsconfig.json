@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "angular-custom-dialogs": [
+        "dist/angular-custom-dialogs/angular-custom-dialogs",
+        "dist/angular-custom-dialogs"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

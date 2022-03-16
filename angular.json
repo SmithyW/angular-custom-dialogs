@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "angular-custom-dialogs": {
+      "projectType": "library",
+      "root": "projects/angular-custom-dialogs",
+      "sourceRoot": "projects/angular-custom-dialogs/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/angular-custom-dialogs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-custom-dialogs/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/angular-custom-dialogs/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-custom-dialogs/src/test.ts",
+            "tsConfig": "projects/angular-custom-dialogs/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-custom-dialogs/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-custom-dialogs"
 }
